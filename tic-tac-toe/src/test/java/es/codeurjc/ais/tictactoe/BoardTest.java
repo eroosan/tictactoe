@@ -1,126 +1,60 @@
 package es.codeurjc.ais.tictactoe;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
+import static org.assertj.core.api.Assertions.assertThat;
 
-import org.junit.Before;
 import org.junit.Test;
 
 import es.codeurjc.ais.tictactoe.TicTacToeGame.Cell;
 
 public class BoardTest {
 
-
-	private Board board;
-	private Cell cell;
-	
-	@Before
-	public void setUp() throws Exception {
-	
-		board = new Board();
-			
+	@Test
+	public void player1WinsTest() throws InterruptedException {
+		boardTest(new int[] { 0, 3, 1, 4, 2 }, 0);
 	}
 
 	@Test
-	public void testFirstPlayerWins() {
-	
-        // | X | X | X |
-        // | O | O |   |
-        // |   |   |   |
-
-		cell = board.getCell(0);			
-	    cell.value = "X";	
-		cell.active = false;	
-
-		cell = board.getCell(3);			
-	    cell.value = "O";	
-		cell.active = false;
-		
-		cell = board.getCell(1);			
-	    cell.value = "X";	
-		cell.active = false;
-		
-		cell = board.getCell(4);			
-	    cell.value = "O";	
-		cell.active = false;
-		
-		cell = board.getCell(2);			
-	    cell.value = "X";	
-		cell.active = false;
-		
-	    assertNotNull(board.getCellsIfWinner("X"));
-	    assertNull(board.getCellsIfWinner("O"));	
+	public void player2WinsTest() throws InterruptedException {
+		boardTest(new int[] { 0, 3, 1, 4, 6, 5 }, 1);
 	}
-	
-	@Test
-	public void testFirstPlayerLoses() {
-	
-        // | X | X |   |
-        // | O | O | O |
-        // | X |   |   |
-		
-		cell = board.getCell(0);			
-	    cell.value = "X";	
-		cell.active = false;	
 
-		cell = board.getCell(3);			
-	    cell.value = "O";	
-		cell.active = false;
-		
-		cell = board.getCell(1);			
-	    cell.value = "X";	
-		cell.active = false;
-		
-		cell = board.getCell(4);			
-	    cell.value = "O";	
-		cell.active = false;
-		
-		cell = board.getCell(6);			
-	    cell.value = "X";	
-		cell.active = false;
-	
-		cell = board.getCell(5);			
-	    cell.value = "O";	
-		cell.active = false;
-		
-	    assertNull(board.getCellsIfWinner("X"));
-	    assertNotNull(board.getCellsIfWinner("O"));
-	}
-	
 	@Test
-	public void testDraw() {
+	public void drawTest() throws InterruptedException {
+		boardTest(new int[] { 0, 1, 3, 6, 4, 8, 7, 5, 2 }, -1);
+	}
+
+	private void boardTest(int[] cells, int winnerIndex) {
 		
-		for (int i = 0; i < 6; i++) {
-			cell = board.getCell(i);
-			cell.active = false;
-			if (i%2 == 0)  
-			{
-				cell.value = "X";	
-			}
-			else
-			{
-				cell.value = "O";
-			}
+		Board board = new Board();
+		String[] labels = { "X", "O" };
+		
+		for(int i=0; i<cells.length; i++) {
+		
+			Cell c = board.getCell(cells[i]);
+			c.value = labels[i % 2];
 		}
 		
-		cell = board.getCell(7);
-		cell.active = false;
-		cell.value = "X";
-		
-		cell = board.getCell(6);
-		cell.active = false;
-		cell.value = "O";
-
-		cell = board.getCell(8);
-		cell.active = false;
-		cell.value = "X";		
-		
-//		| X | O | X |
-//		| O | X | O |	
-//		| O | X | X |	
-		
-		assertTrue(board.checkDraw());		
-	}
-	
+		if(winnerIndex == -1) {
+			
+			assertThat(board.checkDraw()).isTrue();
+			assertThat(board.getCellsIfWinner(labels[0])).isNull();
+			assertThat(board.getCellsIfWinner(labels[1])).isNull();
+			
+		} else {
+			
+			assertThat(board.checkDraw()).isFalse();
+			
+			int[] winnerCells;
+			
+			if(winnerIndex == 0) {
+				winnerCells = new int[] { cells[0], cells[2], cells[4] };
+			} else {
+				winnerCells = new int[] { cells[1], cells[3], cells[5] };
+			}
+			
+			assertThat(board.getCellsIfWinner(labels[winnerIndex])).isEqualTo(winnerCells);
+			assertThat(board.getCellsIfWinner(labels[(winnerIndex+1)%2])).isNull();
+			
+		}
+	}	
 }
