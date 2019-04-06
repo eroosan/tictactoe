@@ -1,0 +1,76 @@
+-------------------------------------------------------------------------------
+Test set: es.codeurjc.ais.tictactoe.SystemTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 9.535 sec <<< FAILURE! - in es.codeurjc.ais.tictactoe.SystemTest
+testDraw(es.codeurjc.ais.tictactoe.SystemTest)  Time elapsed: 0.605 sec  <<< ERROR!
+org.openqa.selenium.WebDriverException: unknown error: Chrome failed to start: exited abnormally
+  (unknown error: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Linux 4.15.0-29-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 399 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'osboxes', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.15.0-29-generic', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:249)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:144)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:170)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:159)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:116)
+	at es.codeurjc.ais.tictactoe.SystemTest.setupTest(SystemTest.java:43)
+
+testFirstPlayerLoses(es.codeurjc.ais.tictactoe.SystemTest)  Time elapsed: 0.225 sec  <<< ERROR!
+org.openqa.selenium.WebDriverException: unknown error: Chrome failed to start: exited abnormally
+  (unknown error: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Linux 4.15.0-29-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 202 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'osboxes', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.15.0-29-generic', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:249)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:144)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:170)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:159)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:116)
+	at es.codeurjc.ais.tictactoe.SystemTest.setupTest(SystemTest.java:43)
+
+testFirstPlayerWins(es.codeurjc.ais.tictactoe.SystemTest)  Time elapsed: 0.21 sec  <<< ERROR!
+org.openqa.selenium.WebDriverException: unknown error: Chrome failed to start: exited abnormally
+  (unknown error: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Linux 4.15.0-29-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 192 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'osboxes', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.15.0-29-generic', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:249)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:144)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:170)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:159)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:116)
+	at es.codeurjc.ais.tictactoe.SystemTest.setupTest(SystemTest.java:43)
+
