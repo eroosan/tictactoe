@@ -6,31 +6,32 @@ node {
       mvnHome = tool 'M3'
    }
    stage ('Docker image') {
-	VERSION = sh ( script: 'cd tic-tac-toe; ./extractVersion.sh', returnStdout: true).trim()
-	sh "cd tic-tac-toe;./builddocker.sh ${VERSION}"
+	sh "cd tic-tac-toe; ./renameVersion.sh ${env.VERSION} pom.xml"
+	sh "cd tic-tac-toe;git add pom.xml;git commit --author 'dev1 <dev1@example.com>' -m \'version pom.xml = ${env.VERSION}\' ;git push origin HEAD:refs/for/master"
+	sh "cd tic-tac-toe;./builddocker.sh ${env.VERSION}"
 	docker.withRegistry('http://registry.hub.docker.com') {
-		sh "docker push eroosan/tictactoe:${VERSION}"
+		sh "docker push eroosan/tictactoe:${env.VERSION}"
 	}
    }
    stage('Build') {
-	sh ( script: "cd tic-tac-toe; docker run --rm -d -p 8090:8080 eroosan/tictactoe:${VERSION}", returnStdout: true).trim()
+	sh ( script: "cd tic-tac-toe; docker run --rm -d -p 8090:8080 eroosan/tictactoe:${env.VERSION}", returnStdout: true).trim()
 	docker.image('maven').inside('-v $HOME/.m2:/root/.m2')
 	{
 		sh "cd tic-tac-toe; mvn -DskipTests=true package"
 	}
    }
    stage('Test') {
-	sh ( script: "cd tic-tac-toe; docker run --rm -d -p 8090:8080 eroosan/tictactoe:${VERSION}", returnStdout: true).trim()
+	sh ( script: "cd tic-tac-toe; docker run --rm -d -p 8090:8080 eroosan/tictactoe:${env.VERSION}", returnStdout: true).trim()
 	docker.image('maven').inside('-v $HOME/.m2:/root/.m2')
 	{
 		sh "cd tic-tac-toe; mvn package -Dtest=*UnitTest"
 	}
    }
    stage('Docker') {
-	sh "cd tic-tac-toe; docker tag eroosan/tictactoe:${VERSION} eroosan/tictactoe:nightly"
+	sh "cd tic-tac-toe; docker tag eroosan/tictactoe:${env.VERSION} eroosan/tictactoe:latest"
 	stage('docker push') {
  		docker.withRegistry('http://registry.hub.docker.com') {
-			sh "docker push eroosan/tictactoe:nightly"
+			sh "docker push eroosan/tictactoe:release"
 		}
 	}
    } 
