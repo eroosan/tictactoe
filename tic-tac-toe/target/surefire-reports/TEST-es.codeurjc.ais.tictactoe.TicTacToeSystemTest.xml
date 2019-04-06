@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="es.codeurjc.ais.tictactoe.TicTacToeSystemTest" time="0.987" tests="3" errors="3" skipped="0" failures="0">
+<testsuite name="es.codeurjc.ais.tictactoe.TicTacToeSystemTest" time="1.365" tests="3" errors="3" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64"/>
@@ -60,12 +60,12 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="drawTest" classname="es.codeurjc.ais.tictactoe.TicTacToeSystemTest" time="0.602">
-    <error message="unknown error: Chrome failed to start: exited abnormally&#10;  (unknown error: DevToolsActivePort file doesn&apos;t exist)&#10;  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)&#10;  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29-generic x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 397 milliseconds&#10;Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;&#10;System info: host: &apos;osboxes&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.15.0-29-generic&apos;, java.version: &apos;1.8.0_191&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver" type="org.openqa.selenium.WebDriverException"><![CDATA[org.openqa.selenium.WebDriverException: unknown error: Chrome failed to start: exited abnormally
+  <testcase name="drawTest" classname="es.codeurjc.ais.tictactoe.TicTacToeSystemTest" time="0.979">
+    <error message="unknown error: Chrome failed to start: exited abnormally&#10;  (unknown error: DevToolsActivePort file doesn&apos;t exist)&#10;  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)&#10;  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29-generic x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 749 milliseconds&#10;Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;&#10;System info: host: &apos;osboxes&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.15.0-29-generic&apos;, java.version: &apos;1.8.0_191&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver" type="org.openqa.selenium.WebDriverException"><![CDATA[org.openqa.selenium.WebDriverException: unknown error: Chrome failed to start: exited abnormally
   (unknown error: DevToolsActivePort file doesn't exist)
   (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
   (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29-generic x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 397 milliseconds
+Command duration or timeout: 749 milliseconds
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
 System info: host: 'osboxes', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.15.0-29-generic', java.version: '1.8.0_191'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
@@ -84,10 +84,9 @@ Driver info: org.openqa.selenium.chrome.ChromeDriver
 	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:116)
 	at es.codeurjc.ais.tictactoe.TicTacToeSystemTest.setupTest(TicTacToeSystemTest.java:35)
 ]]></error>
-    <system-out><![CDATA[2019-04-05 15:00:22 [main] INFO  i.g.bonigarcia.wdm.BrowserManager - Reading https://chromedriver.storage.googleapis.com/ to seek [chromedriver]
-2019-04-05 15:00:23 [main] DEBUG i.g.bonigarcia.wdm.BrowserManager - Using [chromedriver] 73.0.3683.68
-2019-04-05 15:00:23 [main] DEBUG io.github.bonigarcia.wdm.Downloader - Downloading https://chromedriver.storage.googleapis.com/73.0.3683.68/chromedriver_linux64.zip to /root/.m2/repository/webdriver/chromedriver/linux64/73.0.3683.68/chromedriver_linux64.zip
-2019-04-05 15:00:24 [main] INFO  i.g.bonigarcia.wdm.BrowserManager - Exporting webdriver.chrome.driver as /root/.m2/repository/webdriver/chromedriver/linux64/73.0.3683.68/chromedriver
+    <system-out><![CDATA[2019-04-05 20:57:29 [main] DEBUG i.g.bonigarcia.wdm.BrowserManager - Found 73.0.3683.68 chromedriver (64 bits) in cache: /root/.m2/repository/webdriver/chromedriver/linux64/73.0.3683.68/chromedriver
+2019-04-05 20:57:29 [main] DEBUG i.g.bonigarcia.wdm.BrowserManager - Driver for [chromedriver] 73.0.3683.68 found in cache /root/.m2/repository/webdriver/chromedriver/linux64/73.0.3683.68/chromedriver
+2019-04-05 20:57:29 [main] INFO  i.g.bonigarcia.wdm.BrowserManager - Exporting webdriver.chrome.driver as /root/.m2/repository/webdriver/chromedriver/linux64/73.0.3683.68/chromedriver
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -98,17 +97,17 @@ Driver info: org.openqa.selenium.chrome.ChromeDriver
  :: Spring Boot ::        (v1.5.9.RELEASE)
 
 ]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72) on port 15817
+    <system-err><![CDATA[Starting ChromeDriver 73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72) on port 19001
 Only local connections are allowed.
 Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
 ]]></system-err>
   </testcase>
-  <testcase name="player2WinsTest" classname="es.codeurjc.ais.tictactoe.TicTacToeSystemTest" time="0.164">
-    <error message="unknown error: Chrome failed to start: exited abnormally&#10;  (unknown error: DevToolsActivePort file doesn&apos;t exist)&#10;  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)&#10;  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29-generic x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 143 milliseconds&#10;Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;&#10;System info: host: &apos;osboxes&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.15.0-29-generic&apos;, java.version: &apos;1.8.0_191&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver" type="org.openqa.selenium.WebDriverException"><![CDATA[org.openqa.selenium.WebDriverException: unknown error: Chrome failed to start: exited abnormally
+  <testcase name="player2WinsTest" classname="es.codeurjc.ais.tictactoe.TicTacToeSystemTest" time="0.212">
+    <error message="unknown error: Chrome failed to start: exited abnormally&#10;  (unknown error: DevToolsActivePort file doesn&apos;t exist)&#10;  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)&#10;  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29-generic x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 180 milliseconds&#10;Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;&#10;System info: host: &apos;osboxes&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.15.0-29-generic&apos;, java.version: &apos;1.8.0_191&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver" type="org.openqa.selenium.WebDriverException"><![CDATA[org.openqa.selenium.WebDriverException: unknown error: Chrome failed to start: exited abnormally
   (unknown error: DevToolsActivePort file doesn't exist)
   (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
   (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29-generic x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 143 milliseconds
+Command duration or timeout: 180 milliseconds
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
 System info: host: 'osboxes', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.15.0-29-generic', java.version: '1.8.0_191'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
@@ -127,17 +126,17 @@ Driver info: org.openqa.selenium.chrome.ChromeDriver
 	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:116)
 	at es.codeurjc.ais.tictactoe.TicTacToeSystemTest.setupTest(TicTacToeSystemTest.java:35)
 ]]></error>
-    <system-err><![CDATA[Starting ChromeDriver 73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72) on port 3660
+    <system-err><![CDATA[Starting ChromeDriver 73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72) on port 31911
 Only local connections are allowed.
 Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
 ]]></system-err>
   </testcase>
-  <testcase name="player1WinsTest" classname="es.codeurjc.ais.tictactoe.TicTacToeSystemTest" time="0.221">
-    <error message="unknown error: Chrome failed to start: exited abnormally&#10;  (unknown error: DevToolsActivePort file doesn&apos;t exist)&#10;  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)&#10;  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29-generic x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 197 milliseconds&#10;Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;&#10;System info: host: &apos;osboxes&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.15.0-29-generic&apos;, java.version: &apos;1.8.0_191&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver" type="org.openqa.selenium.WebDriverException"><![CDATA[org.openqa.selenium.WebDriverException: unknown error: Chrome failed to start: exited abnormally
+  <testcase name="player1WinsTest" classname="es.codeurjc.ais.tictactoe.TicTacToeSystemTest" time="0.174">
+    <error message="unknown error: Chrome failed to start: exited abnormally&#10;  (unknown error: DevToolsActivePort file doesn&apos;t exist)&#10;  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)&#10;  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29-generic x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 151 milliseconds&#10;Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;&#10;System info: host: &apos;osboxes&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.15.0-29-generic&apos;, java.version: &apos;1.8.0_191&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver" type="org.openqa.selenium.WebDriverException"><![CDATA[org.openqa.selenium.WebDriverException: unknown error: Chrome failed to start: exited abnormally
   (unknown error: DevToolsActivePort file doesn't exist)
   (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
   (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29-generic x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 197 milliseconds
+Command duration or timeout: 151 milliseconds
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
 System info: host: 'osboxes', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.15.0-29-generic', java.version: '1.8.0_191'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
@@ -156,7 +155,7 @@ Driver info: org.openqa.selenium.chrome.ChromeDriver
 	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:116)
 	at es.codeurjc.ais.tictactoe.TicTacToeSystemTest.setupTest(TicTacToeSystemTest.java:35)
 ]]></error>
-    <system-err><![CDATA[Starting ChromeDriver 73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72) on port 5429
+    <system-err><![CDATA[Starting ChromeDriver 73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72) on port 10250
 Only local connections are allowed.
 Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
 ]]></system-err>

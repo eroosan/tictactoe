@@ -3,6 +3,9 @@ package es.codeurjc.ais.tictactoe;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.web.socket.config.annotation.EnableWebSocket;
 import org.springframework.web.socket.config.annotation.WebSocketConfigurer;
 import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry;
@@ -16,6 +19,16 @@ public class WebApp implements WebSocketConfigurer {
 	public static void main(String[] args) {
 		SpringApplication.run(WebApp.class, args);
 	}
+
+    @Bean
+    public static PropertySourcesPlaceholderConfigurer placeholderConfigurer() {
+        PropertySourcesPlaceholderConfigurer propsConfig
+          = new PropertySourcesPlaceholderConfigurer();
+        propsConfig.setLocation(new ClassPathResource("git.properties"));
+        propsConfig.setIgnoreResourceNotFound(true);
+        propsConfig.setIgnoreUnresolvablePlaceholders(true);
+        return propsConfig;
+    }
 
 	@Override
 	public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {

@@ -16,9 +16,6 @@ node {
    stage('Test') {
          sh "cd tic-tac-toe; '${mvnHome}/bin/mvn' clean package -Dtest=*UnitTest"
    }
-   stage('Sonar') {
-         sh "cd tic-tac-toe; '${mvnHome}/bin/mvn' sonar:sonar -Dsonar.host.url=http://172.18.0.10:9000"
-   }
    stage('Docker') {
 	sh "cd tic-tac-toe;./builddocker.sh"	
 	stage('docker push') {
