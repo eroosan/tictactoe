@@ -12,6 +12,7 @@ es/codeurjc/ais/tictactoe/TicTacToeHandler$1.class
 es/codeurjc/ais/tictactoe/Player.class
 es/codeurjc/ais/tictactoe/TicTacToeHandler$ServerToClientMsg.class
 es/codeurjc/ais/tictactoe/TicTacToeHandler$ClientToServerMsg.class
+es/codeurjc/ais/tictactoe/CommitInfoController.class
 es/codeurjc/ais/tictactoe/TicTacToeGame$CellMarkedValue.class
 es/codeurjc/ais/tictactoe/TicTacToeGame$WinnerResult.class
 es/codeurjc/ais/tictactoe/Connection.class

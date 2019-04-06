@@ -1,6 +1,7 @@
 /home/osboxes/tictactoe/tic-tac-toe/src/main/java/es/codeurjc/ais/tictactoe/TicTacToeHandler.java
 /home/osboxes/tictactoe/tic-tac-toe/src/main/java/es/codeurjc/ais/tictactoe/Board.java
 /home/osboxes/tictactoe/tic-tac-toe/src/main/java/es/codeurjc/ais/tictactoe/WebApp.java
+/home/osboxes/tictactoe/tic-tac-toe/src/main/java/es/codeurjc/ais/tictactoe/CommitInfoController.java
 /home/osboxes/tictactoe/tic-tac-toe/src/main/java/es/codeurjc/ais/tictactoe/Connection.java
 /home/osboxes/tictactoe/tic-tac-toe/src/main/java/es/codeurjc/ais/tictactoe/Player.java
 /home/osboxes/tictactoe/tic-tac-toe/src/main/java/es/codeurjc/ais/tictactoe/TicTacToeGame.java
